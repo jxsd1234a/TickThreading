@@ -1,0 +1,10 @@
+version: '{branch}-{build}'
+cache:
+  - C:/Users/appveyor/.gradle
+  - ./.gradle
+build_script:
+  - cmd: ./gradlew build
+test: off
+artifacts:
+  - path: ./build/libs/*.*
+    name: .
